@@ -6,8 +6,7 @@ RUN yum install -y epel-release && \
     yum install -y git nginx python2-pip gcc python-devel ImageMagick && \
     mkdir -p /opt/calibre /opt/calibre-library && cd /opt/calibre && \
     git clone -b master https://github.com/janeczku/calibre-web.git && \
-    cd /opt/calibre/calibre-web && \
-    pip install --upgrade pip && \
+    cd /opt/calibre/calibre-web && pip install --upgrade pip && \
     pip install --target vendor -r requirements.txt && \
     pip install --target vendor -r optional-requirements.txt
 
